@@ -77,6 +77,14 @@ h5, .cover__titre__nom {
   font-family: 'Shrikhand', cursive;
 }
 
+h3 {
+  font-weight: normal;
+}
+
+.menu__tuile__text__price {
+  font-weight: bold;
+}
+
 .header {
   position: relative;
   padding: 20px;
@@ -832,11 +840,11 @@ h5, .cover__titre__nom {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 40px;
+    padding: 0 20px 0 40px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .fonctionnement__ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -859,7 +867,7 @@ h5, .cover__titre__nom {
   transition: all 200ms;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .fonctionnement__ul__li {
     margin-right: 30px;
   }
@@ -871,7 +879,7 @@ h5, .cover__titre__nom {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .fonctionnement__ul__li:last-of-type {
     margin-right: 0;
   }
@@ -933,7 +941,7 @@ h5, .cover__titre__nom {
   padding: 0 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .fonctionnement__ul__li__icon {
     width: 50px;
     padding: 0 20px;

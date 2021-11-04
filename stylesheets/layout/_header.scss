@@ -6,12 +6,19 @@
     @include desktop-only{
         width: $bloc-page;
         @include margin-sides;
-        box-shadow: none;
-        justify-content: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        border-radius: 15px;
+        // box-shadow: none;
+        // justify-content: flex-start;
         padding: 40px;
     }
     &__logo{
         height: 30px;
+        @include desktop-only{
+            height: 35px;
+        }
     }
     &--pages{
         position: absolute;
@@ -20,7 +27,6 @@
         font-size: 20px;
         @include desktop-only{
             font-size: 25px;
-            transform: translateX(-20px);
         }
     
     }

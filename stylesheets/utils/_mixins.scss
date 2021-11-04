@@ -9,11 +9,11 @@
 }
 
 @mixin box-shadow {
-    box-shadow: 5px 5px 5px darken($grey, 4%);
+    box-shadow: 0px 5px 10px darken($grey, 4%);
 }
 
 @mixin darker-box-shadow {
-    box-shadow: 6px 6px 5px darken($grey, 12%);   
+    box-shadow: 0px 6px 15px darken($grey, 12%);   
 }
 
 @mixin margin-sides {

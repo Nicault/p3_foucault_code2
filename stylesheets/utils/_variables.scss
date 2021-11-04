@@ -8,14 +8,14 @@ $white : white;
 $gradient: linear-gradient(to top, $color-primary, $color-secondary);
 $lighter-gradient: linear-gradient(to top, lighten($color-primary, 3%), lighten($color-secondary, 3%));
 
-$apparition-delay : 200ms;
+$apparition-delay : 300ms;
 
 
 $breakpoints: (
     mobile-max: 767px,
     tablette-min: 768px,
-    tablette-max: 999px,
-    desktop-min: 1000px
+    tablette-max: 1000px,
+    desktop-min: 1001px
 );
 
 $bloc-page: 1000px;

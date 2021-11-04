@@ -54,14 +54,17 @@
 @keyframes spin{
     0%{
         transform: rotate(0turn);
+        display: initial;
     }
     100%{
         transform: rotate(1turn);
+        display: none;
     }
 }
 
 @keyframes loading-page{
     0%{
+        display: initial;
         z-index: 1;
         opacity: 80%;
     }
@@ -90,7 +93,8 @@
     @include desktop-only{
         width: $bloc-page;
         @include margin-sides;
-        border-radius: 15px;
+        background-color: white;
+        // border-top: 3px solid $grey;
     }
     &__searchbar{
 
@@ -106,28 +110,12 @@
             @include margin-sides;
             border-radius: 50px;
             margin-top: 30px;
+            @include box-shadow;
         }
         
-        // &::after{
-        //     @include desktop-only{
-        //         position: absolute;
-        //         right: 0px;
-        //         content: "\f002";
-        //         font-family: "font awesome 5 free";
-        //         font-weight: bold;
-        //         @include flex-center;
-        //         color: darken($grey, 5%);
-        //         background-color: darken($grey, 30%);
-        //         height: 40px;
-        //         width: 40px;
-        //         border-radius: 50px;
-        //         transform: translateX(-5px);
-        //         cursor: pointer;
-        //     }
-        // }
         &__type{
             @include desktop-only{
-                width: 250px;
+                width: 200px;
             }
             
         
@@ -169,7 +157,7 @@
     &__ul{
         @include tablette-and-desktop{
             display: flex;
-            // justify-content: space-between;
+            justify-content: space-between;
         }
 
         &__li{
@@ -180,13 +168,11 @@
             border-radius: 15px;
             @include box-shadow;
             transition: all 200ms;
-            @include tablette-only{
-                margin-right: 40px;
-
+            @include tablette-and-desktop{
+                margin-right: 30px;
             }
             @include desktop-only{
                 width: 350px;
-                margin-right: 40px;
             }
             &:last-of-type{
                 @include tablette-and-desktop{
@@ -228,10 +214,16 @@
             &__icon{
                 width: 100px;
                 padding: 0 40px;
+                @include tablette-and-desktop{
+                    width: 50px;
+                    padding: 0 20px;
+                }
                 
             }
+            &__txt{
+                padding-right: 20px;
+            }
         }
-        
     }
     h2{
         margin-bottom: 20px;
@@ -261,10 +253,7 @@
     }
     h2{
         margin-bottom: 20px;
-        @include tablette-only{
-            min-width: 600px;
-        }
-        @include desktop-only{
+        @include tablette-and-desktop{
             width: $bloc-page;
         }
     }

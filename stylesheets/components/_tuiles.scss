@@ -60,20 +60,25 @@
     border-radius: 15px;
     margin: 0px 20px 15px 20px;
     display: flex;
-    // overflow: hidden;
-    @include desktop-only{
-        // margin: 0;
-    }
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 300px;
+
 
 
     &__text{
         width: 100%;
+        min-width: 200px;
         display: flex;
         justify-content: space-between;
-        padding: 20px;
+        
 
         &__name{
-            width: 100%;
+            padding: 20px;
+            // width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             h4{
                 white-space: nowrap;
                 overflow: hidden;
@@ -87,9 +92,12 @@
 
         }
         &__price{
-            max-width: 20%;
+            padding: 20px 0;
+            margin-right: 20px;
+            width: 30px;
             align-self: flex-end;
             text-align: right;
+            // padding-left: 20px;
         }
         &:hover{
             width: 100%;
@@ -97,266 +105,36 @@
             & + .menu__tuile__selected{
             width: 100px;
             transition: transform 2s, width 200ms;
-            & i{
-                color: white;
-                font-size: 25px;
-                transform: rotate(1turn);
-                transition: transform 500ms 50ms;
-                visibility: visible;
-            }
-            }
-
-        }    
+                & i{
+                    transform: rotate(1turn);
+                    transition: transform 500ms 50ms;
+                    visibility: visible;
+                }
+            }      
+        }
     }
+
     &__selected{
-        
         height: 80px;
         @include flex-center;
         border-radius: 0px 15px 15px 0px;
         background-color: $color-tertiary;
         width: 0;
         & i{
-            content: "\f058";
-            font-family: "font awesome 5 free";
-            font-weight: bold;
             transform: rotate(0turn);
             color: white;
             font-size: 25px;
             visibility: hidden;
         }
-        // &__icon{
-        //             // visibility: hidden;
-        //             color: red;
-        //             font-size: 20px;
-        //             transform: rotate(0turn);
-        // }
         &:hover{
             width: 100px;
             transition: transform 2s, width 200ms;
-            &::after{
+            & i{
                 transform: rotate(1turn);
                 transition: transform 500ms 50ms;
                 visibility: visible;
             }
         }
     }
-
 }
-    // &__name{
-    //     padding: 20px;
-    //     width: 60%;
-    //     white-space: nowrap;
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-        
-    // }
-    // &__prix{
-    //     width: 20%;
-    //     padding: 20px;
-    //     align-self: flex-end;
-    //     text-align: right;
-    // }
-    // &__selected{
-    //     // display: none;
-    //     position: absolute;
-    //     right: 0;
-    //     @include flex-center;
-    //     border-radius: 0px 15px 15px 0px;
-    //     width: 0%;
-    //     height: 80px;
-    //     // transform-origin: right;
-    //     background-color: $color-tertiary;
-    //     &__icon{
-    //         visibility: hidden;
-    //         color: red;
-    //         font-size: 20px;
-    //         transform: rotate(0turn);
-    //     }
-    // }
-    // &__prix:hover + &__selected{
-    //     width: 20%;
-    // }
-            // &::after{
-            //     content: "\f058";
-            //     font-family: "font awesome 5 free";
-            //     color: red;
-            //     font-size: 25px;
-            //     font-weight: bold;
-            //     transform: rotate(0turn)
-            // }
-
     
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // page 1
-
-    // &__txt{
-    //     height: 100%;
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     &__name{
-    //         padding: 20px;
-    //         flex-direction: column;
-    //         white-space: nowrap;
-    //         text-overflow: ellipsis;
-    //         background-color: red;
-    //         overflow: hidden;
-    //     }
-    //     &__prix{
-    //         text-align: center;
-    //         align-self: flex-end;
-    //         background-color: aqua;
-    //         height: 100%;
-    //         display: flex;
-            
-    //         p{
-    //             width: 80px;
-    //         }
-            
-    //     }
-    //     &__selected{
-
-    //         @include flex-center;
-    //         border-radius: 0px 15px 15px 0px;
-    //         appearance: none;
-    //         width: 80px;
-    //         height: 100%;
-    //         transform:  translateX(80px) scale(0, 1);
-    //         transform-origin: right;
-    //         &::after{
-    //             content: "\f058";
-    //             font-family: "font awesome 5 free";
-    //             color: white;
-    //             font-size: 25px;
-    //             font-weight: bold;
-    //             transform: rotate(0turn)
-    //         }
-    //         &:checked{
-    //             background-color: $color-tertiary;
-    //             transform: translateX(0) scale(1, 1);
-    //             transition: all 500ms;
-    //             &::after{
-    //                 transform: rotate(2turn);
-    //                 transition: transform 500ms 100ms;
-    //             }
-    //             & ~ p{
-    //                 transform: translateX(-160px);
-    //                 transition: all 1s;
-    //             }
-
-    //         }
-        
-    //     }
-
-    // }
-// }
-
-
-
-
-
-
-// page2
-// .menu__tuile{
-//     display: flex;
-//     &__1{
-//         padding: 20px;
-//         min-width: 50%;
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-
-//     }
-//     &__2{
-//         width: 160px;
-//         display: flex;
-//         transform: translateX(80px);
-        
-//         &__price{
-//             width: 80px;
-//             align-self: flex-end;
-//             padding-bottom: 20px;
-//         }
-//         &__selected{
-//             @include flex-center;
-//             border-radius: 0px 15px 15px 0px;
-//             appearance: none;
-//             width: 80px;
-//             // background-color: $color-tertiary;
-//             height: 100%;
-//             transform:  translateX(80px) scale(0, 1);
-//             transform-origin: right;
-//             &::after{
-//                 content: "\f058";
-//                 font-family: "font awesome 5 free";
-//                 color: white;
-//                 font-size: 25px;
-//                 font-weight: bold;
-//                 transform: rotate(0turn)
-//             }
-//             &:checked{
-//                 background-color: $color-tertiary;
-//                 transform: translateX(0) scale(1, 1);
-//                 transition: all 500ms backwards;
-//                 &::after{
-//                     transform: rotate(2turn);
-//                     transition: transform 500ms 100ms;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// page3
-// .menu__tuile{
-//     display: flex;
-//     &__name{
-//         width: 300px;
-//         padding: 20px;
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-//     }
-//     &__prix{
-//         display: flex;
-//         justify-content: flex-end;
-//         align-items: flex-end;
-//         width: 80px;
-//         height: 80px;
-//         padding: 20px;
-//         transform: translateX(80px);
-//     }
-//     &__selected{
-//         width: 80px;
-//         height: 80px;
-//         border-radius: 0px 15px 15px 0px;
-//         background-color: $color-tertiary;
-//         @include flex-center;
-//         transform: translateX(80px);
-//         &::after{
-//         content: "\f058";
-//         font-family: "font awesome 5 free";
-//         color: white;
-//         font-size: 25px;
-//         font-weight: bold;
-//         transform: rotate(0turn);
-//         }
-//     }
-//     &:hover + .menu__tuile__prix{
-//         transform: translateX(0px);
-//         transition: transform 200ms;
-//     }
-// }
-

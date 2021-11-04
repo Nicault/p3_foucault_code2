@@ -1,5 +1,5 @@
 .button{
-    width: max-content;
+    width: 200px;
     padding: 15px 20px;
     border: none;
     border-radius: 50px;
@@ -22,11 +22,12 @@
     appearance: none;
     background: linear-gradient(to bottom, $color-primary, $color-secondary);
     background-clip: text;
-    min-width: 33px;
+    cursor: pointer;
+    padding: 10px;
         &::after{
             content: "\f004";
             font-family: "font awesome 5 free";
-            font-size: 30px;
+            font-size: 25px;
             transition: color 1s;
         }
         &:hover::after{

@@ -1,0 +1,9 @@
+@for $i from 1 through 10{
+    .menu__tuile:nth-of-type(#{$i}n){
+        animation-delay: $i * $apparition-delay;
+    }
+}
+
+
+
+

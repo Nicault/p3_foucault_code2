@@ -1,0 +1,271 @@
+.loader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    @include flex-center;
+    animation: loading-page 3s forwards;
+    &__spinner{
+        position: relative;
+        height: 70px;
+        width: 70px;
+        // top: 50%;
+        // left: 50%;
+        border-radius: 50px;
+        border: 5px solid transparent;
+        border-top-color: $color-primary;
+        animation: spin 1s infinite;
+        // background-color: red;
+        
+    
+        &::before{
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 5px;
+            left: 5px;
+            // background-color: royalblue;           
+            border-radius: 50px;
+            border: 5px solid transparent;
+            border-top-color: $color-secondary;
+            animation: spin 1.5s infinite;
+            opacity: 80%;
+
+        }
+        
+        &::after{
+            content: "";
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 15px;
+            left: 15px;
+            // background-color: salmon;
+            border-radius: 50px;
+            border: 5px solid transparent;
+            border-top-color: $color-tertiary;
+            animation: spin 2s infinite;
+            opacity: 60%;
+        }
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes loading-page{
+    0%{
+        z-index: 1;
+        opacity: 80%;
+    }
+    90%{
+        z-index: 1;
+        opacity: 80%;
+    }
+    99%{
+        z-index: 1;
+    }
+    100%{
+        z-index: -1;
+        opacity: 0%;
+        display: none;
+
+    }
+}
+
+
+
+.entete__form{
+    @include flex-center;
+    flex-direction: column;
+    background-color: $grey;
+    margin-bottom: 40px;
+    @include desktop-only{
+        width: $bloc-page;
+        @include margin-sides;
+        border-radius: 15px;
+    }
+    &__searchbar{
+
+        @include flex-center;
+        align-self: stretch;
+        height: 40px;
+        background-color: darken($grey, 5%);
+        margin-bottom: 30px;
+        @include desktop-only{
+            position: relative;
+            height: 50px;
+            width: 250px;
+            @include margin-sides;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+        
+        // &::after{
+        //     @include desktop-only{
+        //         position: absolute;
+        //         right: 0px;
+        //         content: "\f002";
+        //         font-family: "font awesome 5 free";
+        //         font-weight: bold;
+        //         @include flex-center;
+        //         color: darken($grey, 5%);
+        //         background-color: darken($grey, 30%);
+        //         height: 40px;
+        //         width: 40px;
+        //         border-radius: 50px;
+        //         transform: translateX(-5px);
+        //         cursor: pointer;
+        //     }
+        // }
+        &__type{
+            @include desktop-only{
+                width: 250px;
+            }
+            
+        
+        }
+        &__logo{
+            padding: 10px;
+        }
+        &__type{
+            border: none;
+            outline-style: none;
+            background-color: darken($grey, 5%);
+        }
+    }
+
+    &__txt{
+        text-align: center;
+        padding: 0px 30px;
+        margin-bottom: 20px;
+        h1{
+            margin-bottom: 10px;
+        }
+    }
+
+    &__button{
+        margin-bottom: 40px;
+    }
+}
+
+.fonctionnement{
+    padding: 0px 20px;
+    margin-bottom: 40px;
+    @include desktop-only{
+        width: $bloc-page;
+        @include margin-sides;
+        padding: 0 40px;
+ 
+    }
+
+    &__ul{
+        @include tablette-and-desktop{
+            display: flex;
+            // justify-content: space-between;
+        }
+
+        &__li{
+            position: relative;
+            height: 60px;
+            background-color: $grey;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            @include box-shadow;
+            transition: all 200ms;
+            @include tablette-only{
+                margin-right: 40px;
+
+            }
+            @include desktop-only{
+                width: 350px;
+                margin-right: 40px;
+            }
+            &:last-of-type{
+                @include tablette-and-desktop{
+                    margin-right: 0;
+                }
+            }
+            &:hover{
+                background-color: lighten($color-primary, 35%);
+                color: $color-primary;
+                transition: all 200ms;
+            }
+            &::before{
+                // content: "";
+                @include flex-center;
+                font-size: 15px;
+                color: white;
+                position: absolute;
+                background-color: $color-primary;
+                border-radius: 50px;
+                height: 25px;
+                width: 25px;
+                top: 50%;
+                transform: translate(-50%, -50%);                
+            }
+            &:nth-of-type(1)::before{
+                content: "1";
+            }
+            &:nth-of-type(2)::before{
+                content: "2";
+            }
+            &:nth-of-type(3)::before{
+                content: "3";
+            }
+            a{
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            &__icon{
+                width: 100px;
+                padding: 0 40px;
+                
+            }
+        }
+        
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: $grey;
+    @include tablette-only{
+        // padding: 40px 0 0 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include desktop-only{
+        padding: 40px 0 0 40px;
+        width: $bloc-page;
+        @include margin-sides;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+    h2{
+        margin-bottom: 20px;
+        @include tablette-only{
+            min-width: 600px;
+        }
+        @include desktop-only{
+            width: $bloc-page;
+        }
+    }
+}

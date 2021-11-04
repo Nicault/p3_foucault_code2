@@ -1,0 +1,26 @@
+$color-primary : #9356DC;
+$color-secondary : #FF79DA;
+$color-tertiary : #99E2D0;
+
+$grey : #F2F2F2;
+$white : white;
+
+$gradient: linear-gradient(to top, $color-primary, $color-secondary);
+$lighter-gradient: linear-gradient(to top, lighten($color-primary, 3%), lighten($color-secondary, 3%));
+
+$apparition-delay : 200ms;
+
+
+$breakpoints: (
+    mobile-max: 767px,
+    tablette-min: 768px,
+    tablette-max: 999px,
+    desktop-min: 1000px
+);
+
+$bloc-page: 1000px;
+
+
+
+
+

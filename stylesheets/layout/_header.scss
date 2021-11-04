@@ -1,0 +1,30 @@
+.header{
+    position: relative;
+    padding: 20px;
+    @include flex-center;
+    box-shadow: 0px 3px 5px darken($grey, 10%);
+    @include desktop-only{
+        width: $bloc-page;
+        @include margin-sides;
+        box-shadow: none;
+        justify-content: flex-start;
+        padding: 40px;
+    }
+    &__logo{
+        height: 30px;
+    }
+    &--pages{
+        position: absolute;
+        left: 0px;
+        padding: 20px;
+        font-size: 20px;
+        @include desktop-only{
+            font-size: 25px;
+            transform: translateX(-20px);
+        }
+    
+    }
+}
+
+
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../stylesheets/main.css" />
+        <script src="https://kit.fontawesome.com/0f2fe6ee64.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ohmyfood</title>
+    </head>
+
+    <body>
+        <div class="loader">
+            <div class="loader__spinner"></div>
+        </div>
+
+        <header class="header">
+            <img src="../images/logo.png" alt="Logo ohmyfood" class="header__logo"/>
+        </header>
+
+        <section class="entete">
+            <form method="POST" action="traitement.php" class="entete__form">
+                <div class="entete__form__searchbar">
+                    <label for="type_recherches" class="entete__form__searchbar__logo"><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" name="recherches" placeholder="Paris, Belleville" class="entete__form__searchbar__type" id="type_recherches"/>
+                </div>
+                <div class="entete__form__txt">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                </div>
+                <button type="submit" value="" class="button entete__form__button">Explorer nos restaurants
+                </button>
+            </form>
+        </section>
+
+        <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <ul class="fonctionnement__ul">
+                <li class="fonctionnement__ul__li">
+                    <a href="#">
+                        <i class="fas fa-mobile-alt fonctionnement__ul__li__icon"></i>
+                        <p class="fonctionnement__ul__li__txt">Choisissez un restaurant</p>
+                    </a>
+                </li>
+                <li class="fonctionnement__ul__li">
+                    <a href="#">
+                        <i class="fas fa-list-ul fonctionnement__ul__li__icon"></i>
+                        <p class="fonctionnement__ul__li__txt">Composez votre menu</p>
+                    </a>
+                </li>
+                <li class="fonctionnement__ul__li fonctionnement__ul__li--selected" >
+                    <a href="#">
+                        <i class="fas fa-store fonctionnement__ul__li__icon"></i>
+                        <p class="fonctionnement__ul__li__txt">Dégustez au restaurant</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <a href="page1.html" class="restaurants__tuile">
+                <img class="restaurants__tuile__img" src="../images/restaurants/la_palette_du_gout.jpg" alt="La palette du goût - Ménilmontant" />
+                <div class="restaurants__tuile--new">Nouveau</div>
+                <div class="restaurants__tuile__legende">
+                    <div class="restaurants__tuile__legende__txt">
+                        <h4>La palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <div class="icon--heart restaurants__tuile__legende__icon"></div> 
+                </div>
+            </a>
+
+            <a href="page2.html" class="restaurants__tuile">
+                <img class="restaurants__tuile__img" src="../images/restaurants/la_note_enchantee.jpg" alt="La note enchantée - Charonne" />
+                <div class="restaurants__tuile--new">Nouveau</div>
+                <div class="restaurants__tuile__legende">
+                    <div class="restaurants__tuile__legende__txt">
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="icon--heart restaurants__tuile__legende__icon"></div>
+                </div>
+            </a>
+
+            <a href="page3.html" class="restaurants__tuile">
+                <img class="restaurants__tuile__img" src="../images/restaurants/a_la_francaise.jpg" alt="À la française - Cité Rouge" />
+                <div class="restaurants__tuile__legende">
+                    <div class="restaurants__tuile__legende__txt">
+                        <h4>À la française</h4>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <div class="icon--heart restaurants__tuile__legende__icon"></div>
+                </div>
+            </a>
+            
+            <a href="page4.html" class="restaurants__tuile">
+                <img class="restaurants__tuile__img" src="../images/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens - Folie-Méricourt" />
+                <div class="restaurants__tuile__legende">
+                    <div class="restaurants__tuile__legende__txt">
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="icon--heart restaurants__tuile__legende__icon"></div>
+                </div>
+            </a>
+        </section>
+
+        <footer class="footer">
+            <h5 class="footer__title">ohmyfood</h5>
+            <ul class="footer__list">
+                <li class="footer__list__elmt">
+                    <a href="#">
+                        <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                    </a>
+                </li>
+
+                <li class="footer__list__elmt">
+                    <a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Devenir partenaire</p>
+                    </a>
+                </li>
+
+                <li class="footer__list__elmt">
+                    <a href="#">
+                    <p>Mentions légales</p>
+                    </a>
+                </li>
+
+                <li class="footer__list__elmt">
+                    <a href="mailto:#">
+                    <p>Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

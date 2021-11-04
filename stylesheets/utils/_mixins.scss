@@ -1,0 +1,49 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+@mixin translate-center{
+    transform: translate(-50%,-50%);
+}
+
+@mixin box-shadow {
+    box-shadow: 5px 5px 5px darken($grey, 4%);
+}
+
+@mixin darker-box-shadow {
+    box-shadow: 6px 6px 5px darken($grey, 12%);   
+}
+
+@mixin margin-sides {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+@mixin tablette-only{
+    @media (min-width: map-get($breakpoints, tablette-min)) and (max-width: map-get($breakpoints, tablette-max)){
+        @content;
+    }
+
+}
+
+@mixin desktop-only{
+    @media (min-width: map-get($breakpoints, desktop-min)){
+        @content;
+    }
+
+}
+
+@mixin tablette-and-desktop {
+    @media (min-width: map-get($breakpoints, tablette-min )){
+        @content
+    }
+    
+}
+
+
+
+
+

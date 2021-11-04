@@ -594,8 +594,7 @@ h3 {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   cursor: pointer;
   padding: 10px;
@@ -610,7 +609,7 @@ h3 {
 }
 
 .icon--heart:hover::after {
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
   -webkit-transition: all 500ms;
   transition: all 500ms;

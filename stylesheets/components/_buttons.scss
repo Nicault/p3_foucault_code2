@@ -20,7 +20,7 @@
 
 .icon--heart{
     appearance: none;
-    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
     -webkit-background-clip: text;
     cursor: pointer;
     padding: 10px;
@@ -31,7 +31,7 @@
             transition: color 1s;
         }
         &:hover::after{
-            color: transparent;
+            -webkit-text-fill-color: transparent;
             font-weight: bold;
             transition: all 500ms;
         }

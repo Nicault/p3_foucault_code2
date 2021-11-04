@@ -104,6 +104,7 @@
         background-color: darken($grey, 5%);
         margin-bottom: 30px;
         @include desktop-only{
+            // background-color: $grey;
             position: relative;
             height: 50px;
             width: 250px;
@@ -116,10 +117,10 @@
         &__type{
             @include desktop-only{
                 width: 200px;
-            }
-            
-        
+                background-color: $grey;
+            }   
         }
+        
         &__logo{
             padding: 10px;
         }

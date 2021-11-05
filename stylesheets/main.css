@@ -77,12 +77,20 @@ h5, .cover__titre__nom {
   font-family: 'Shrikhand', cursive;
 }
 
+h4 {
+  font-size: 15px;
+}
+
 h3 {
   font-weight: normal;
 }
 
 .menu__tuile__text__price {
   font-weight: bold;
+}
+
+p {
+  font-size: 14px;
 }
 
 .header {

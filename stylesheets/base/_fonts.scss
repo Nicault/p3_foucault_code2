@@ -9,6 +9,9 @@ h5, .cover__titre__nom {
 }
 h4{
     font-size: 15px;
+    @include desktop-only{
+        font-size: 16px;
+    }
 }
 
 h3{
@@ -21,4 +24,7 @@ h3{
 
 p{
     font-size: 14px;
+    @include desktop-only{
+        font-size: 15px;
+    }
 }

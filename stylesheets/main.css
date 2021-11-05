@@ -81,6 +81,12 @@ h4 {
   font-size: 15px;
 }
 
+@media (min-width: 1001px) {
+  h4 {
+    font-size: 16px;
+  }
+}
+
 h3 {
   font-weight: normal;
 }
@@ -91,6 +97,12 @@ h3 {
 
 p {
   font-size: 14px;
+}
+
+@media (min-width: 1001px) {
+  p {
+    font-size: 15px;
+  }
 }
 
 .header {

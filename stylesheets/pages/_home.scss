@@ -1,11 +1,14 @@
 .loader{
     position: fixed;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 1;
     background-color: white;
     @include flex-center;
     animation: loading-page 3s forwards;
+    @include desktop-only{
+        transform: translateY(-$margin-top-desktop); 
+    }
     &__spinner{
         position: relative;
         height: 70px;
@@ -184,6 +187,10 @@
                 background-color: lighten($color-primary, 35%);
                 color: $color-primary;
                 transition: all 200ms;
+            }
+            &--selected{
+                background-color: lighten($color-primary, 35%);
+                color: $color-primary;
             }
             &::before{
                 // content: "";

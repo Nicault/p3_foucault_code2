@@ -6,7 +6,7 @@
     @include desktop-only{
         width: $bloc-page;
         @include margin-sides;
-        margin-top: 20px;
+        margin-top: $margin-top-desktop;
         margin-bottom: 20px;
 
         border-radius: 15px;

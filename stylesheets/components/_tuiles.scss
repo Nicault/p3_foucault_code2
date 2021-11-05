@@ -29,9 +29,15 @@
         width: 100%;
         background-color: white;
         border-radius: 0px 0px 15px 15px;
-        padding: 15px;
+        padding: 20px;
         display: flex;
         justify-content: space-between;
+        &__txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // padding: 20px;
+        }
         &__icon{
             display: flex;
             align-self: center;
@@ -74,12 +80,13 @@
         
 
         &__name{
-            padding: 15px;
+            padding: 20px 15px;
             // width: 100%;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
+            justify-content: space-between;
             h4{
                 white-space: nowrap;
                 overflow: hidden;
@@ -93,7 +100,7 @@
 
         }
         &__price{
-            padding: 15px 0;
+            padding: 20px 0;
             margin-right: 20px;
             width: 30px;
             align-self: flex-end;

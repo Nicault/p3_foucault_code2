@@ -191,7 +191,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 20px 30px;
 }
 
 @media (min-width: 1001px) {
@@ -421,10 +421,23 @@ p {
   width: 100%;
   background-color: white;
   border-radius: 0px 0px 15px 15px;
-  padding: 15px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurants__tuile__legende__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -476,7 +489,7 @@ p {
 }
 
 .menu__tuile__text__name {
-  padding: 15px;
+  padding: 20px 15px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,9 +498,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu__tuile__text__name h4 {
@@ -503,7 +516,7 @@ p {
 }
 
 .menu__tuile__text__price {
-  padding: 15px 0;
+  padding: 20px 0;
   margin-right: 20px;
   width: 30px;
   -ms-flex-item-align: end;
@@ -602,8 +615,10 @@ p {
 }
 
 .icon--heart {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: relative;
-  padding: 10px;
   font-size: 25px;
   cursor: pointer;
 }
@@ -613,10 +628,9 @@ p {
   content: "\f004";
   font-family: "font awesome 5 free";
   font-size: 28px;
-  padding: 8px;
   font-weight: bold;
-  top: 1px;
-  left: 1px;
+  top: -1px;
+  left: -1px;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;

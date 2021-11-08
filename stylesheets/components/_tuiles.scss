@@ -80,11 +80,9 @@
 
         &__name{
             padding: 20px 15px;
-            // width: 100%;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            // justify-content: center;
             justify-content: space-between;
             h4{
                 white-space: nowrap;
@@ -127,21 +125,21 @@
         border-radius: 0px 15px 15px 0px;
         background-color: $color-tertiary;
         width: 0;
+        transition: width 200ms;
         & i{
             transform: rotate(0turn);
             color: white;
             font-size: 25px;
             visibility: hidden;
+            transition-delay: 200ms;
         }
         &:hover{
             width: 100px;
-            transition: transform 2s, width 200ms;
+            transition: transform 200ms, width 200ms;
             & i{
                 transform: rotate(1turn);
-                transition: transform 500ms 50ms;
                 visibility: visible;
             }
         }
     }
 }
-    

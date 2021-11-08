@@ -574,6 +574,8 @@ p {
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   width: 0;
+  -webkit-transition: width 200ms;
+  transition: width 200ms;
 }
 
 .menu__tuile__selected i {
@@ -582,23 +584,21 @@ p {
   color: white;
   font-size: 25px;
   visibility: hidden;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 
 .menu__tuile__selected:hover {
   width: 100px;
-  -webkit-transition: width 200ms, -webkit-transform 2s;
-  transition: width 200ms, -webkit-transform 2s;
-  transition: transform 2s, width 200ms;
-  transition: transform 2s, width 200ms, -webkit-transform 2s;
+  -webkit-transition: width 200ms, -webkit-transform 200ms;
+  transition: width 200ms, -webkit-transform 200ms;
+  transition: transform 200ms, width 200ms;
+  transition: transform 200ms, width 200ms, -webkit-transform 200ms;
 }
 
 .menu__tuile__selected:hover i {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
-  -webkit-transition: -webkit-transform 500ms 50ms;
-  transition: -webkit-transform 500ms 50ms;
-  transition: transform 500ms 50ms;
-  transition: transform 500ms 50ms, -webkit-transform 500ms 50ms;
   visibility: visible;
 }
 
@@ -661,17 +661,15 @@ p {
 
 @-webkit-keyframes heart-pop {
   0% {
-    opacity: 1;
+    opacity: 0;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
   20% {
-    opacity: 1;
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
   }
   80% {
-    opacity: 1;
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
   }
@@ -684,17 +682,15 @@ p {
 
 @keyframes heart-pop {
   0% {
-    opacity: 1;
+    opacity: 0;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
   20% {
-    opacity: 1;
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
   }
   80% {
-    opacity: 1;
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
   }
